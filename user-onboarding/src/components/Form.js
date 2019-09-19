@@ -23,13 +23,14 @@ const UserForm = ({ values, errors, touched, status }) =>{
                     {" "}
                     Please select if you have read and agree to the terms of service.
                     <Field component="checkbox" name="tos" checked={values.tos} />
+                    <span className="checkmark" />
                 </label>
                 <button type="submit">Submit</button> 
             </Form>
             {users.map(user => (
                 <ul key={user.id}>
-                    <li>{user.name}</li>
-                    <li>{user.email}</li>
+                    <li>Your username is: {user.name}</li>
+                    <li>Your email address is: {user.email}</li>
                 </ul>
             ))}
         </div>
